@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="novel">
+            <h2><span jhiTranslate="jh9App.novel.detail.title">Novel</span> {{novel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jh9App.novel.articleName">Article Name</span></dt>
+                <dd>
+                    <span>{{novel.articleName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jh9App.novel.authors">Authors</span></dt>
+                <dd>
+                    <span *ngFor="let authors of novel.authors; let last = last">
+                        <a [routerLink]="['/author', authors?.id, 'view' ]">{{authors.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/novel', novel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
