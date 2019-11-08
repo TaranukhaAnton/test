@@ -1,0 +1,38 @@
+entity Article {
+	articleName String
+}
+
+entity Novel {
+	articleName String
+}
+
+
+entity Author {
+	countryName String
+}
+
+
+
+
+
+
+relationship ManyToMany {
+	Article{authors} to Author
+    Novel{authors} to Author
+    
+}
+
+
+
+// Set pagination options
+paginate Article, Novel with infinite-scroll
+paginate Author with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
