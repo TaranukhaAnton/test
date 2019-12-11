@@ -1,0 +1,29 @@
+{
+    "name": "Article",
+    "fields": [
+        {
+            "fieldName": "articleName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "author",
+            "otherEntityRelationshipName": "article",
+            "relationshipName": "authors",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191108211135",
+    "entityTableName": "article",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

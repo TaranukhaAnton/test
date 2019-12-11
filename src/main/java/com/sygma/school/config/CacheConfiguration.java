@@ -38,6 +38,11 @@ public class CacheConfiguration {
             cm.createCache(com.sygma.school.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.sygma.school.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.sygma.school.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            createCache(cm, com.sygma.school.domain.Article.class.getName());
+            createCache(cm, com.sygma.school.domain.Article.class.getName() + ".authors");
+            createCache(cm, com.sygma.school.domain.Novel.class.getName());
+            createCache(cm, com.sygma.school.domain.Novel.class.getName() + ".authors");
+            createCache(cm, com.sygma.school.domain.Author.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

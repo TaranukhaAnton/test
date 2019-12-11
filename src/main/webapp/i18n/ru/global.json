@@ -7,6 +7,9 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Сущности",
+                "article": "Article",
+                "novel": "Novel",
+                "author": "Author",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -81,10 +84,10 @@
             }
         },
         "field": {
-            "id" : "ID"
+            "id": "ID"
         },
         "ribbon": {
-            "dev":"Разработка"
+            "dev": "Разработка"
         },
         "item-count": "{{first}} - {{second}} из {{total}}"
     },

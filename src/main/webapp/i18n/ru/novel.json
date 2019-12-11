@@ -1,0 +1,23 @@
+{
+    "jh9App": {
+        "novel": {
+            "home": {
+                "title": "Novels",
+                "createLabel": "Создать новый Novel",
+                "createOrEditLabel": "Создать или отредактировать Novel",
+                "notFound": "No Novels found"
+            },
+            "created": "Новый Novel создан с идентификатором {{ param }}",
+            "updated": "Novel обновлен с идентификатором {{ param }}",
+            "deleted": "Novel удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Novel {{ id }}?"
+            },
+            "detail": {
+                "title": "Novel"
+            },
+            "articleName": "Article Name",
+            "authors": "Authors"
+        }
+    }
+}
